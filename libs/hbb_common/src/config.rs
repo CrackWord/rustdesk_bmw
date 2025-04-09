@@ -73,16 +73,16 @@ lazy_static::lazy_static! {
         let mut map = HashMap::new();
 		
 	// 原始字节数据
-        let bytes: [u8; 12] = [
-            66, 109, 119, 64,   // B, m, w, @
-            73, 115, 116, 97,   // I, s, t, a
-            50, 48, 50, 53      // 2, 0, 2, 5
-        ];
+       // let bytes: [u8; 12] = [
+        //    66, 109, 119, 64,   // B, m, w, @
+        //    73, 115, 116, 97,   // I, s, t, a
+        //    50, 48, 50, 53      // 2, 0, 2, 5
+        //];
     
         // 转换方式 1：通过字节切片
-        let s1 = std::str::from_utf8(&bytes).unwrap();
+        //let s1 = std::str::from_utf8(&bytes).unwrap();
     		
-            map.insert("password".to_string(), s1.to_string());
+            map.insert("password".to_string(), "Bmw@Ista2025".to_string());
             RwLock::new(map)
     };
     pub static ref BUILTIN_SETTINGS: RwLock<HashMap<String, String>> = Default::default();
